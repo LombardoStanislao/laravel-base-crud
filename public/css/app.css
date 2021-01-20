@@ -10944,3 +10944,15 @@ a.text-dark:focus {
   }
 }
 
+body {
+  background-color: rgba(210, 0, 0, 0.6);
+}
+
+.row {
+  justify-content: center;
+}
+
+.card {
+  margin-top: 50px;
+}
+
