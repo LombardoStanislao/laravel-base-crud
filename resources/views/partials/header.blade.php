@@ -8,10 +8,10 @@
         <div class="collapse navbar-collapse" id="navbarsExample07">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="{{ route('homepage') }}">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Cars</a>
+              <a class="nav-link" href="{{ route('cars.index')}}">Cars</a>
             </li>
           </ul>
           <form class="form-inline my-2 my-md-0">

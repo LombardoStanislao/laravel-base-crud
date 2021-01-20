@@ -9,11 +9,6 @@ class HomeController extends Controller
 {
     public function index() {
 
-      $cars = Car::all();
-
-      $data = [
-        'cars' => $cars,
-      ];
-      return view('home', $data);
+      return view('home');
     }
 }
