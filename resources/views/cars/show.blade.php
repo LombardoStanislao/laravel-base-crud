@@ -7,7 +7,7 @@
     <div class="row">
 
     <div class="col-12">
-      <h1>Maggiori informazioni per la macchina:  {{ $car->Modello }}</h1>
+      <h1>Maggiori informazioni per la macchina:  {{ $car->casa_produttrice . ' ' . $car->modello }}</h1>
 
     </div>
 

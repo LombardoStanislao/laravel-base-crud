@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class UpdateCarsTable extends Migration
+class UpdateUsersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -14,13 +14,8 @@ class UpdateCarsTable extends Migration
     public function up()
     {
         Schema::table('cars', function (Blueprint $table) {
-          $table->string('immagine')->after('id');
-        });
 
-        Schema::table('cars', function (Blueprint $table) {
-          $table->renameColumn('Casa Produttrice', 'casa_produttrice');
         });
-
     }
 
     /**
@@ -31,9 +26,7 @@ class UpdateCarsTable extends Migration
     public function down()
     {
         Schema::table('cars', function (Blueprint $table) {
-
-          $table->dropColumn('immagine');
-
+          
         });
     }
 }

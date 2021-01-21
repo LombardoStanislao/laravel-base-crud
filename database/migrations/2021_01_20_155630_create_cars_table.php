@@ -15,11 +15,11 @@ class CreateCarsTable extends Migration
     {
         Schema::create('cars', function (Blueprint $table) {
             $table->id();
-            $table->string('Casa Produttrice');
-            $table->string('Modello');
-            $table->smallInteger('Anno');
-            $table->smallInteger('Cilindrata');
-            $table->decimal('Prezzo', 8, 2);
+            $table->string('casa_produttrice');
+            $table->string('modello');
+            $table->smallInteger('anno');
+            $table->smallInteger('cilindrata');
+            $table->decimal('prezzo', 8, 2);
             $table->timestamps();
         });
     }

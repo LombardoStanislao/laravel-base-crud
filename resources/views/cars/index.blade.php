@@ -16,12 +16,13 @@
 
           <div class="card" style="width: 18rem;">
             <div class="card-body">
-              <h5 class="card-title text-center">{{ $car->Modello }}</h5>
+              <h5 class="card-title text-center">{{ $car->casa_produttrice }}</h5>
             </div>
             <ul class="list-group list-group-flush">
-              <li class="list-group-item">Anno di immatricolazione: {{ $car->Anno }}</li>
-              <li class="list-group-item">Cilindrata: {{ $car->Cilindrata}}cc</li>
-              <li class="list-group-item">Prezzo: {{ $car->Prezzo}}€</li>
+              <li class="list-group-item">Modello: {{ $car->modello }}</li>
+              <li class="list-group-item">Anno di immatricolazione: {{ $car->anno }}</li>
+              <li class="list-group-item">Cilindrata: {{ $car->cilindrata}}cc</li>
+              <li class="list-group-item">Prezzo: {{ $car->prezzo}}€</li>
             </ul>
             <div class="card-body">
               <a href="{{ route('cars.show', ['car' => $car->id])}}" class="card-link">Maggiori informazioni</a>

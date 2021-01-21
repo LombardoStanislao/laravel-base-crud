@@ -10954,7 +10954,8 @@ body {
 
 .card,
 h1,
-.btn {
+.btn,
+form {
   margin-top: 50px;
 }
 
