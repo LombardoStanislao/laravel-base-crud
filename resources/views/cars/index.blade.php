@@ -5,6 +5,11 @@
 
   <div class="container">
     <div class="row">
+      <div class="col-3 col-offset-4">
+        <a href="{{route('cars.create')}}" class="btn btn-info">Aggiungi una nuova auto</a>
+      </div>
+    </div>
+    <div class="row">
 
       @foreach ($cars as $car)
         <div class="col-4">

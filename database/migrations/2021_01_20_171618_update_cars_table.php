@@ -17,6 +17,10 @@ class UpdateCarsTable extends Migration
           $table->string('immagine')->after('id');
         });
 
+        Schema::table('cars', function (Blueprint $table) {
+          $table->renameColumn('Casa Produttrice', 'casa_produttrice');
+        });
+
     }
 
     /**
