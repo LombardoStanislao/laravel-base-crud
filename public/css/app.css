@@ -10954,8 +10954,9 @@ body {
 
 .card,
 h1,
-.btn,
-form {
+form,
+.add-car,
+.return {
   margin-top: 50px;
 }
 

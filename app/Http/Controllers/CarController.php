@@ -50,7 +50,7 @@ class CarController extends Controller
         $newCar->prezzo = $data['prezzo'];
         $newCar->save();
 
-        return redirect()->route('cars.create');
+        return redirect()->route('cars.show', $newCar->id);
     }
 
     /**
@@ -79,9 +79,13 @@ class CarController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Car $car)
     {
-        //
+      if ($car) {
+          return view('cars.edit', compact('car'));
+      }
+      abort(404);
+
     }
 
     /**
@@ -91,9 +95,12 @@ class CarController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Car $car)
     {
-        //
+        $data = $request->all();
+        $car->update($data);
+        return redirect()->route('cars.show', $car->id);
+
     }
 
     /**
@@ -104,6 +111,8 @@ class CarController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $car = Car::find($id);
+        $car->delete();
+        return redirect()->route('cars.index');
     }
 }
